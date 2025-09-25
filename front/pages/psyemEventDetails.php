@@ -178,32 +178,28 @@ while (have_posts()) : the_post();
                                                 </p>
                                             </div>
                                         </div>
-                                        <?php if ($eventRegType == 'Free' || $eventRegType == 'Invitation'): ?>
+                                        <?php if ($eventRegType != 'Free' && $eventRegType != 'Invitation'): ?>
+                                            <div class="col-md-6">
+                                                <div class="eventAddress">
+                                                    <h4 class="aboutPreTxt mb-1 fw200">
+                                                        <?= __('Registration Type', 'psyeventsmanager') ?>:
+                                                    </h4>
+                                                    <p class="eventAddressPre">
+                                                        <strong> <?= $eventRegType ?> </strong>
+                                                    </p>
+                                                </div>
+                                            </div>
                                             <div class="col-md-6">
                                                 <div class="eventAddress">
                                                     <h4 class="aboutPreTxt mb-1 fw200">
                                                         <?= __('Registration Fee', 'psyeventsmanager') ?>:
                                                     </h4>
                                                     <p class="eventAddressPre">
-                                                        <?php if ($eventRegType == 'Free'): ?>
-                                                            <strong><?= $curreny_sign ?>0.00</strong>
-                                                        <?php elseif ($eventRegType == 'Invitation'): ?>
-                                                            <strong><?= __('Free', 'psyeventsmanager') ?></strong>
-                                                        <?php endif; ?>
+                                                        <strong><?= $curreny_sign ?>0.00</strong>
                                                     </p>
                                                 </div>
                                             </div>
                                         <?php endif; ?>
-                                        <div class="col-md-6">
-                                            <div class="eventAddress">
-                                                <h4 class="aboutPreTxt mb-1 fw200">
-                                                    <?= __('Registration Type', 'psyeventsmanager') ?>:
-                                                </h4>
-                                                <p class="eventAddressPre">
-                                                    <strong> <?= $eventRegType ?> </strong>
-                                                </p>
-                                            </div>
-                                        </div>
 
                                     </div>
                                 </div>
