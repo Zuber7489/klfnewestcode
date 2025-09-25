@@ -90,7 +90,7 @@ while (have_posts()) : the_post();
                         if ($start_date === $end_date) {
                             echo $start_date;
                         } else {
-                            echo $start_date . ' - ' . $end_date;
+                            echo $start_date . '<br>' . $end_date;
                         }
                         ?>
                     </div>
